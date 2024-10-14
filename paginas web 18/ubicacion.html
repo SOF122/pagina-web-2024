@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación en el Mapa</title>
+    <style>
+        /* Estilos del contenedor del mapa */
+        .map-container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background-image: url('ubi.png');
+            background-size: cover;
+            border: 2px solid #333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos del marcador en el mapa */
+        .marker {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 50%;
+            bottom: 100px; /* Ajusta esta posición */
+            left: 300px;   /* Ajusta esta posición */
+        }
+
+        /* Estilo para el tooltip */
+        .tooltip {
+            position: absolute;
+            bottom: 140px;
+            left: 310px;
+            background-color: #fff;
+            padding: 5px 10px;
+            border: 1px solid #333;
+            font-size: 12px;
+            display: none;
+        }
+
+        .marker:hover + .tooltip {
+            display: block;
+        }
+
+        /* Estilos del botón */
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="map-container">
+    <div class="marker"></div>
+    <div class="tooltip">Ubicación exacta</div>
+</div>
+
+<!-- Botón para volver a la página de inicio -->
+<a href="index.html" class="back-button">Volver a Inicio</a>
+
+</body>
+</html>
